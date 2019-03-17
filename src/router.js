@@ -17,9 +17,19 @@ const router = new VueRouter({
       path: '/',
       component: Home
     },
-    // 商品一覧ページ
+    // 自己紹介ページ
     {
-      path: '/product',
+      path: '/about',
+      component: ProductList,
+    },
+    // メールでやり取りするページ
+    {
+      path: '/contact',
+      component: ProductList,
+    },
+    // ポートフォリオページ
+    {
+      path: '/portforios',
       component: ProductList,
     },
     // 商品情報ページ
