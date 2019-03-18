@@ -4,6 +4,9 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home'
 import ProductList from '@/views/ProductList' // 商品一覧
 import Product from '@/views/Product' // 商品情報（親ルート）
+import About from '@/views/About'
+import Portforio from '@/views/Portforio'
+import Contact from '@/views/Contact'
 // Productの子ルートたち
 import ProductHome from '@/views/Product/Home'
 import ProductReview from '@/views/Product/Review'
@@ -20,17 +23,17 @@ const router = new VueRouter({
     // 自己紹介ページ
     {
       path: '/about',
-      component: ProductList,
+      component: About,
     },
     // メールでやり取りするページ
     {
       path: '/contact',
-      component: ProductList,
+      component: Contact,
     },
     // ポートフォリオページ
     {
-      path: '/portforios',
-      component: ProductList,
+      path: '/portforio',
+      component: Portforio,
     },
     // 商品情報ページ
     {

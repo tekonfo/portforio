@@ -9,10 +9,10 @@
       <v-toolbar-title>近藤大翔のPortforio!</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn to="/panda" flat>Home</v-btn>
-        <v-btn flat>Portforio</v-btn>
-        <v-btn flat>About</v-btn>
-        <v-btn flat>Contact</v-btn>
+        <v-btn to="/" flat>Home</v-btn>
+        <v-btn to="/portforio" flat>Portforio</v-btn>
+        <v-btn to="/about" flat>About</v-btn>
+        <v-btn to="/contact" flat>Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <Sidebar ref="child"></Sidebar>
