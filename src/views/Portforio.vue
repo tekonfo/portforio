@@ -66,7 +66,7 @@
           {
             title: "読即動",
             detail: "読書ブログ、Wordpressで作成",
-            image_url: require("../assets/読即動.png"),
+            image_url: require("../assets/Read.png"),
             link: "https://tekondo.com/",
             to: "#"
           }
