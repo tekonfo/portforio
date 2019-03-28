@@ -5,7 +5,7 @@
       <Header></Header>
       <!-- ここにパスと一致したコンポーネントが埋め込まれる -->
       <v-layout row>
-        <v-flex xs12 sm6 offset-sm3>
+        <v-flex xs12 sm8 offset-sm2>
           <router-view />
         </v-flex>
       </v-layout>
@@ -22,6 +22,8 @@
       >
         <v-icon>email</v-icon>
       </v-btn>
+
+      <Footer></Footer>
     </div>
   </v-app>
 </template>
@@ -34,9 +36,11 @@
 
 <script>
   import Header from "@/views/groval/Header.vue";
+  import Footer from "@/views/groval/Footer.vue";
   export default {
     components: {
-      Header
+      Header,
+      Footer
     }
   }
 </script>
