@@ -6,6 +6,7 @@ import Vuetify from 'vuetify'
 // index.js or main.js
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import "material-design-icons/iconfont/material-icons.css";
+import '@fortawesome/fontawesome-free/css/all.css'
 
 Vue.use(Vuetify)
 new Vue({
