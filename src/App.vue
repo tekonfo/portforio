@@ -10,19 +10,20 @@
         </v-flex>
       </v-layout>
       <!-- to="/contact" これを追加してしまうと位置がバグる-->
-      <v-btn
-        absolute
-        fixed
-        dark
-        fab
-        bottom
-        right
-        color="pink"
-        class="mb-5 mr-5"
-      >
-        <v-icon>email</v-icon>
-      </v-btn>
-
+      <a href='#/contact'>
+        <v-btn
+          absolute
+          fixed
+          dark
+          fab
+          bottom
+          right
+          color="pink"
+          class="mb-5 mr-5"
+        >
+          <v-icon>email</v-icon>
+        </v-btn>
+      </a>
       <Footer></Footer>
     </div>
   </v-app>

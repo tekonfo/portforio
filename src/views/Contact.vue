@@ -1,7 +1,6 @@
 <template>
   <v-card class="mt-3" >
     <v-img
-
       src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
       height="200px"
     >
@@ -37,10 +36,9 @@
            rows="3"
            class="ml-3 mr-3"
          ></v-textarea>
-        <v-btn
-          @click="submit"
-          class="ml-3"
-        >submit</v-btn>
+        <div class="text-xs-center pb-3 pt-5 ">
+          <v-btn @click="submit" color="primary" large>送信する</v-btn>
+        </div>
       </form>
     </v-card-title>
   </v-card>
@@ -52,7 +50,6 @@
 
   export default {
     mixins: [validationMixin],
-
     validations: {
       name: { required, maxLength: maxLength(10) },
       email: { required, email },
@@ -99,17 +96,38 @@
         return errors
       }
     },
-
     methods: {
       submit () {
-        this.$v.$touch()
+        const axiosBase = require('axios');
+        const axios = axiosBase.create({
+          baseURL: 'https://notify-api.line.me/api/notify', // バックエンドB のURL:port を指定する
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': process.env.VUE_APP_LINE_ACCESS_TOKEN,
+            'Access-Control-Allow-Origin': '*'
+          }
+        });
+        axios.post('', {
+          headers: this.headers,
+          params: {
+            message: "test"
+          }
+        })
+        .then(function(response) {
+        })
+        .catch(function(error) {
+          console.log('ERROR!! occurred in Backend.')
+        });
+        this.message = ''
+        this.name = ''
+        this.email = ''
+        console.log("ok")
       },
-      clear () {
+      clear() {
         this.$v.$reset()
         this.name = ''
         this.email = ''
-        this.select = null
-        this.checkbox = false
+        this.message = ''
       }
     }
   }

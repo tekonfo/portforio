@@ -1,6 +1,8 @@
 <template >
-  <div>
-    <v-toolbar>
+  <div
+    class="pb-5"
+  >
+    <v-toolbar color="indigo lighten-1 white--text">
       <v-toolbar-side-icon
         class="hidden-md-and-up"
         @click.stop=handleClick()
@@ -9,10 +11,10 @@
       <v-toolbar-title>近藤大翔のPortforio!</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn to="/" flat>Home</v-btn>
-        <v-btn to="/portforio" flat>Portforio</v-btn>
-        <v-btn to="/about" flat>About</v-btn>
-        <v-btn to="/contact" flat>Contact</v-btn>
+        <v-btn to="/" flat class="white--text">Home</v-btn>
+        <v-btn to="/about" flat class="white--text">About</v-btn>
+        <v-btn to="/portforio" flat class="white--text">Portforio</v-btn>
+        <v-btn to="/contact" flat class="white--text">Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <Sidebar ref="child"></Sidebar>
