@@ -17,6 +17,7 @@ import ProductReviewDetail from '@/views/Product/ReviewDetail'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/',
