@@ -4,7 +4,6 @@
       <v-card-title primary-title>
         <div>
           <div class="headline">自己紹介</div>
-          <span>Listen to your favorite artists and albums whenever and wherever, online and offline.</span>
         </div>
       </v-card-title>
       <v-card-actions>
@@ -27,10 +26,6 @@
           </v-expansion-panel-content>
         </v-expansion-panel>
       </v-card-actions>
-      <div class="d-flex justify-between align-center mb-3">
-        <v-btn @click="all">all</v-btn>
-        <v-btn @click="none">none</v-btn>
-      </div>
     </v-card>
   </v-flex>
 </template>

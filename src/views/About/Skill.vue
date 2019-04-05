@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-xl text-xs-center class="pa-0">
   <v-flex xs12>
-    <v-card color="black" class="white--text">
+    <v-card color="indigo darken-3" class="white--text">
       <v-card-title primary-title>
         <div>
           <div class="headline">技術：スキル</div>
@@ -40,7 +40,7 @@
               </v-container>
             </template>
             <v-card>
-              <v-card-text class="grey lighten-3">
+              <v-card-text class="grey lighten-3" style="white-space:pre-line;">
                 {{ skill.text }}
               </v-card-text>
             </v-card>
@@ -63,29 +63,67 @@
       return {
         skills: [
           {
-            name: "RubyOnRails",
+            name: "Ruby, RubyOnRails",
             rating: 5,
-            text: "一番自身のある技術です。\n\n使用経歴：TECH::CAMPメンター、チームラボインターン、自作オリアプWillPower"
+            text:
+            `一番自信のある技術です.
+            はじめてWebサイトを構築したフレームワークでもあり、愛着があります。
+            もう何回 rails s 打ち込んだのかわかりません。
+            とにかく多くのGem, ActiveRecord等の標準ライブラリの使いやすさ
+            といった点で他言語のフレームワーク優位性があり、アイデアをストレスなく形にできる点が大好きです。
+
+            使用歴: 一年半
+            使用経歴: TECH::CAMPメンター、チームラボインターン、自作オリアプ
+            `
           },
           {
             name: "Docker",
-            rating: 4.5,
-            text: "長期インターンで基盤技術として採用されているので使っています。"
+            rating: 4,
+            text:
+            `長期インターンで基盤技術として採用されています。
+            マイクロサービス化が進んでいるため相性のいいコンテナ技術注目されている時代の流れもあり自分で学習も進めていました。
+            code as a infrastructureと呼ばれる考え方の通りコードとしてインフラを管理できる点、誰が動かしても同一の環境を手に入れられる点が素晴らしいと思います。
+
+            使用歴: 約一年
+            使用経歴: NOVASTOインターン, CyberAgent:kubernetesインターン
+            `
           },
           {
             name: "AWS",
             rating: 4,
-            text: "長期インターンで使用しています。サービスとしてはEC2, Lmabda, ECS, ,SQS ,CloudWatchなど色々触らせてもらっています"
+            text:
+            `
+            EC2, Lmabda, ECS, SQS ,CloudWatch, Cognitoなど色々触っています。
+            開発のインターンで色々なことを頼まれるので手探りで色々触っていたら結構な数になりました。
+            I AM 等の概念は変わらないので新しいサービスを使うことになってもある程度は応用が効くかなと思っています。
+
+            使用歴: 約一年
+            使用経歴: NOVASTOインターン
+            `
           },
           {
-            name: "Html css",
-            rating: 4,
-            text: "Railsを触る課程で色々弄ってきていました。CSSフレームワークはMaterialize.cssを使ったことがあります。"
-          },
-          {
-            name: "Vue.js",
+            name: "Vue.js, Nuxt.js",
             rating: 3,
-            text: "このポートフォリオサイトをVue,jsで作成しています。使用経歴的には短いですがこれから継続して学習していく予定です"
+            text:
+            `
+            きっかけはイケイケなモダンjavascriptフレームワークを使いたくて本で勉強開始しました。
+            考え方、文法も比較的簡単で独学でも大きく詰まらずに進めることができました。
+            Vueの良さはJqueryで既に書かれているアプリでも段階的に置き換えることができる点です。
+            WillPowerと言うアプリも初めはJqueryで作成していたのですがVueに置き換えて行きました。
+            インターン先でもNuxt.jsでフロントが書かれているので継続的に勉強していく予定です。
+            あとこのサイトはvue,vuetifyで作成しています
+
+            使用歴: 半年
+            使用経歴: このサイト, NOVASTOインターン
+            `
+          },
+          {
+            name: "Golang",
+            rating: 1,
+            text:
+            `
+            見せられるものがなくてお恥ずかしいのですがちょこちょこ勉強しています。
+            `
           }
         ],
         items: [
