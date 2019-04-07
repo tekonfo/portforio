@@ -14,7 +14,6 @@
         <v-btn to="/" flat class="white--text">Home</v-btn>
         <v-btn to="/about" flat class="white--text">About</v-btn>
         <v-btn to="/portforio" flat class="white--text">Portforio</v-btn>
-        <v-btn to="/contact" flat class="white--text">Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <Sidebar ref="child"></Sidebar>

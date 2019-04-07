@@ -1,0 +1,17 @@
+[debug] [2019-04-07T05:02:49.834Z] ----------------------------------------------------------------------
+[debug] [2019-04-07T05:02:49.837Z] Command:       /Users/kondoutaisyou/.nvm/versions/node/v9.10.1/bin/node /Users/kondoutaisyou/.nvm/versions/node/v9.10.1/bin/firebase functions:config:set admin.email=taisho90@icloud.com
+[debug] [2019-04-07T05:02:49.837Z] CLI Version:   6.5.2
+[debug] [2019-04-07T05:02:49.838Z] Platform:      darwin
+[debug] [2019-04-07T05:02:49.838Z] Node Version:  v9.10.1
+[debug] [2019-04-07T05:02:49.838Z] Time:          Sun Apr 07 2019 14:02:49 GMT+0900 (JST)
+[debug] [2019-04-07T05:02:49.838Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-07T05:02:49.862Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-07T05:02:49.863Z] > authorizing via signed-in user
+[debug] [2019-04-07T05:02:49.863Z] [iam] checking project portforio-5f8ff for permissions ["firebase.projects.get","runtimeconfig.configs.create","runtimeconfig.configs.delete","runtimeconfig.configs.get","runtimeconfig.configs.list","runtimeconfig.configs.update","runtimeconfig.variables.create","runtimeconfig.variables.delete","runtimeconfig.variables.get","runtimeconfig.variables.list","runtimeconfig.variables.update"]
+[debug] [2019-04-07T05:02:49.865Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/portforio-5f8ff:testIamPermissions  
+
+[debug] [2019-04-07T05:03:49.938Z] Error: getaddrinfo ENOTFOUND cloudresourcemanager.googleapis.com cloudresourcemanager.googleapis.com:443
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND cloudresourcemanager.googleapis.com cloudresourcemanager.googleapis.com:443

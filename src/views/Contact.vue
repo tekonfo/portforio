@@ -47,6 +47,7 @@
 <script>
   import { validationMixin } from 'vuelidate'
   import { required, maxLength, email } from 'vuelidate/lib/validators'
+  import { functions } from '@/plugins/firebase'
 
   export default {
     mixins: [validationMixin],
@@ -62,6 +63,9 @@
     },
 
     data: () => ({
+      contactForm: {
+        name: ''
+      },
       name: '',
       email: '',
       message: '',
@@ -97,31 +101,26 @@
       }
     },
     methods: {
-      submit () {
-        const axiosBase = require('axios');
-        const axios = axiosBase.create({
-          baseURL: 'https://notify-api.line.me/api/notify', // バックエンドB のURL:port を指定する
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': process.env.VUE_APP_LINE_ACCESS_TOKEN,
-            'Access-Control-Allow-Origin': '*'
-          }
-        });
-        axios.post('', {
-          headers: this.headers,
-          params: {
-            message: "test"
-          }
-        })
-        .then(function(response) {
-        })
-        .catch(function(error) {
-          console.log('ERROR!! occurred in Backend.')
-        });
-        this.message = ''
-        this.name = ''
-        this.email = ''
-        console.log("ok")
+      submit: function () {
+        const mailer = functions.httpsCallable('sendMail')
+        mailer(this.contactForm)
+          .then(() => {
+            this.formReset()
+            this.showSnackBar(
+              'success',
+              'お問い合わせありがとうございます。送信完了しました'
+            )
+          })
+          .catch(err => {
+            this.showSnackBar(
+              'error',
+              '送信に失敗しました。時間をおいて再度お試しください'
+            )
+            console.log(err)
+          })
+          .finally(() => {
+            this.contactForm.loading = false
+          })
       },
       clear() {
         this.$v.$reset()

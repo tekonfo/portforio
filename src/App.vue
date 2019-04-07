@@ -10,7 +10,7 @@
         </v-flex>
       </v-layout>
       <!-- to="/contact" これを追加してしまうと位置がバグる-->
-      <a href='#/contact'>
+      <!-- <a href='#/contact'>
         <v-btn
           absolute
           fixed
@@ -23,7 +23,7 @@
         >
           <v-icon>email</v-icon>
         </v-btn>
-      </a>
+      </a> -->
       <Footer></Footer>
     </div>
   </v-app>
